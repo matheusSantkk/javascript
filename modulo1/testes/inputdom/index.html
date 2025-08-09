@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando numeros</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Somando valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="somar" id="button">
+    <div id="res">
+        Resultado
+    </div>
+
+    <script>
+        let tn1 = document.querySelector('input#txtn1');
+        let tn2 = document.querySelector('input#txtn2');
+        let buttom = document.querySelector('input#button');
+        let res = document.querySelector('div#res');
+
+        buttom.addEventListener('click', function() {
+            let n1 = parseFloat(tn1.value);
+            let n2 = parseFloat(tn2.value);
+
+            if (isNaN(n1) || isNaN(n2)) {
+                res.innerHTML = `Por favor Digite números validos`;
+                return
+            }
+            
+            let soma = n1 + n2;
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a ${soma}`;
+        });
+    </script>
+</body>
+</html>
