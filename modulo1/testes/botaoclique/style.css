@@ -35,3 +35,8 @@ div#main > button {
     margin: 10px auto;
 
 }
+
+div#main > div#res {
+    text-align: center;
+    font-size: 18pt;
+}
